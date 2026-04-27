@@ -1,10 +1,10 @@
-﻿const http = require('node:http');
+const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 
 const hostname = '127.0.0.1';
 const port = 3000;
-const htmlFile = path.join(process.cwd(), 'wonderxyme.html');
+const htmlFile = path.join(__dirname, 'wonderxyme.html');
 
 const server = http.createServer((req, res) => {
   if (req.url === '/' || req.url === '/index.html' || req.url === '/wonderxyme.html') {
