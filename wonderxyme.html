@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wonderxyme</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #111827;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+      --accent-soft: #0f172a;
+      --border: rgba(226, 232, 240, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 32px 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 32px 24px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.96);
+      margin-bottom: 32px;
+      box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+    }
+
+    header h1 {
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      margin-bottom: 16px;
+    }
+
+    header p {
+      max-width: 720px;
+      opacity: 0.82;
+    }
+
+    .button {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+    }
+
+    .card h2 {
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+    }
+
+    .card p {
+      opacity: 0.85;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: rgba(226, 232, 240, 0.65);
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        padding: 20px 16px;
+      }
+
+      header {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Wonderxyme</h1>
+      <p>Welcome to your new website. This page is powered by your Node.js server and serves your HTML directly from <code>wonderxyme.html</code>.</p>
+      <a class="button" href="#features">Explore the site</a>
+    </header>
+
+    <section id="features" class="grid">
+      <article class="card">
+        <h2>Fast static website</h2>
+        <p>Serve your HTML page instantly with a lightweight Node.js server. The page is ready to open in any modern browser.</p>
+      </article>
+      <article class="card">
+        <h2>Responsive design</h2>
+        <p>This layout adapts to mobile screens, tablets, and desktop displays using modern CSS and a clean visual style.</p>
+      </article>
+      <article class="card">
+        <h2>Easy customization</h2>
+        <p>Edit this HTML file to update text, add sections, change colors, or include your own branding and content.</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 24px;">
+      <h2>How to use</h2>
+      <p>Run the Node server with <code>node index.js</code>, then open <strong>http://localhost:3000</strong> in your browser. Your website will load from this HTML file.</p>
+    </section>
+
+    <footer>
+      <p>Built with Node.js and simple HTML/CSS — ready to become a full website.</p>
+    </footer>
+  </main>
+</body>
+</html>
