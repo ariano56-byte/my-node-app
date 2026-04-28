@@ -140,12 +140,13 @@
 <div id="snackbar"><span id="snackbar-msg"></span><button id="snackbar-undo" style="display:none">Undo</button></div>
 <input type="file" id="import-file-input" accept=".json" style="display:none" onchange="handleImportFile(event)">
 
+<script src="/supabase-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 // ============ SUPABASE CONFIGURATION ============
-const SUPABASE_URL = 'https://tgrtesjyjwuzcqvfpadc.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRncnRlc2p5and1emNxdmZwYWRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMDA4OTMsImV4cCI6MjA5Mjg3Njg5M30.tp4e1nLfqR19IYgPxCuls5_DOVrFtX0uBqDqWKYNi7k';
+const SUPABASE_URL = window.SUPABASE_URL || '';
+const SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || '';
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ============ APP STATE ============
